@@ -1,0 +1,21 @@
+{% if event_list %}
+    <div class=wsd wsd_style="magazine"><pre>
+    {% for event in event_list %}
+        {% if event.dest %}
+            {% if event.source %}
+                {{event.source}}->{{event.dest}}: {{event.summary}}
+            {% else %}
+                note over {{event.dest}}: {{event.summary}}
+            {% endif %}
+        {% elif event.source %}
+            {% if event.dest %}                
+                {{event.source}}->{{event.dest}}: {{event.summary}}
+            {% else %}
+                note over {{event.source}}: {{event.summary}}}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    </pre></div><script type="text/javascript" src="http://www.websequencediagrams.com/service.js"></script>
+{% else %}
+    <p> No events found. </p>
+{% endif %}

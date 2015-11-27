@@ -1,0 +1,10 @@
+from django.conf.urls import url
+
+from . import views
+
+urlpatterns = [
+    url(r'^$', views.index, name='index'),
+    url(r'^columns$', views.columns, name='Columns'),
+    url(r'^endpoints$', views.endpoints, name='Endpoints'),
+    url(r'^endpoint/([^/]*)/([^/]+)$', views.endpoint, name='Endpoint'),
+]

@@ -1,0 +1,5 @@
+<div class=wsd wsd_style="magazine">
+<h2>Endpoints</h2>
+<table>
+<tr><td>{{ ip }}' + ip + '</td><td>' + name + '</td></tr>
+</table>

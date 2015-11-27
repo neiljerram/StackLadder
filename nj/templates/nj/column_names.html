@@ -1,0 +1,8 @@
+{% if columns %}
+    <div class=wsd wsd_style="magazine"><pre>
+    {% for col in columns %}
+       <p> {{col}}
+    {% endfor %}
+{% else %}
+    <p> No events found. </p>
+{% endif %}
